@@ -1,0 +1,94 @@
+<html>
+<head>
+<style>
+	.names { position: absolute; font-size: 22;
+		filter: shadow(color=f5f5f5, direction=-30)}
+</style>
+<title> Languages </title>
+</head>
+<body bgcolor=b0e0e6 SCROLL = NO background=img\fon.jpg>
+<!------------------------------------------------------------------------------------------->
+<div id=pres style="position:absolute; filter:revealtrans(duration=8, transition=2)">
+	<input type=button value=Презентация name=presBut>
+</div>
+<!------------------------------------------------------------------------------------------->
+<DIV id=hcpp style="top:90;  color:red" class=names>C++		</DIV>
+<DIV id=hpas style="top:140; color:blue" class=names>Delphi		</DIV>
+<DIV id=hbas style="top:190; color:green" class=names>Visual Basic	</DIV>
+<!------------------------------------------------------------------------------------------->
+<div id=cpp style="position:absolute; visibility:hidden; color:red">
+	C++ - Идеальный язык для любых платформ, я отдаю предпочтение C++ Builder
+</div>
+<div id=pas style="position:absolute; visibility:hidden; color:blue">
+	Старый добрый Pascal ! Почти вымирающий язык обрел новую форму в исполнении Delphi !
+</div>
+<div id=bas style="position:absolute; visibility:hidden; color:green">
+	Visual Basic - Лучшая визуальная среда разработки, для новичков, за считанные минуты даже новичок создаст приложение средней сложности
+</div>
+<!------------------------------------------------------------------------------------------->
+<div id=hibar style="top:270; position:absolute; filter:revealtrans(duration=5, transition=12)"">
+Я предлагаю использовать новый тип подсказок, на основе тегов "DIV".
+Наведите мышью на название языка программирования, и вы увидите подсказку.
+(если не увидите, то ваш броузер не поддерживает теги "DIV")
+</div>
+<script language=vbs>
+'-------------------------------------------------
+sub document_onmousemove()
+	  cpp.style.top = window.event.y  +15
+	  cpp.style.left = window.event.x +15
+	  bas.style.top = window.event.y  +15
+	  bas.style.left = window.event.x +15
+	  pas.style.top = window.event.y  +15
+	  pas.style.left = window.event.x +15
+end sub
+
+'-------------------------------------------------
+	sub hcpp_onmouseover()
+		  cpp.style.visibility = "visible"
+	end sub
+	sub hcpp_onmouseout()
+		  cpp.style.visibility = "hidden"
+	end sub
+
+'-------------------------------------------------
+'-------------------------------------------------
+	sub hbas_onmouseover()
+		  bas.style.visibility = "visible"
+	end sub
+	sub hbas_onmouseout()
+		  bas.style.visibility = "hidden"
+	end sub
+
+'-------------------------------------------------
+'-------------------------------------------------
+	sub hpas_onmouseover()
+		  pas.style.visibility = "visible"
+	end sub
+	sub hpas_onmouseout()
+		  pas.style.visibility = "hidden"
+	end sub
+
+'-------------------------------------------------
+	sub presBut_onclick()
+		hibar.style.visibility = "hidden"
+		hibar.filters.revealtrans.Apply()
+		hibar.style.visibility = "visible"
+		hibar.filters.revealtrans.Play()
+	end sub
+'-------------------------------------------------
+	sub hibar_onclick()
+		pres.style.visibility = "hidden"
+		pres.filters.revealtrans.Apply()
+		pres.style.visibility = "visible"
+		pres.filters.revealtrans.Play()
+	end sub
+'-------------------------------------------------
+		defaultStatus = "Щелкните мышкой на кнопке 'презентация', или на тексте вспомогательной информации"
+		pres.style.visibility = "hidden"
+		pres.filters.revealtrans.Apply()
+		pres.style.visibility = "visible"
+		pres.filters.revealtrans.Play()
+'-------------------------------------------------
+</script>
+</body>
+</html>

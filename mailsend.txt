@@ -1,0 +1,15 @@
+telnet pop.mail.ru 25
+220
+helo pop.mail.ru
+250
+mail from: admin@mail.ru
+250
+rcpt to: inbox@mail.ru
+250
+data 
+354
+message
+<Enter>
+.
+<Enter>
+250
